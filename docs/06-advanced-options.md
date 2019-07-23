@@ -389,7 +389,7 @@ When examining the size of a volume in consideration for compacting, a small tol
 
 ### snapshot-policy
 `--snapshot-policy = off`  
-This setting controls the usage of snapshots, which allows Duplicati to backup files that are locked by other programs. If this is set to `off`, Duplicati will not attempt to create a disk snapshot. Setting this to `auto` makes Duplicati attempt to create a snapshot, and fail silently if that was not allowed or supported. A setting of `on` will also make Duplicati attempt to create a snapshot, but will produce a warning message in the log if it fails. Setting it to `required` will make Duplicati abort the backup if the snapshot creation fails. On Windows this uses the Volume Shadow Copy Services (VSS) and requires administrative privileges. On Linux this uses Logical Volume Management (LVM) and requires root privileges.
+This setting controls the usage of snapshots, which allows Duplicati to backup files that are locked by other programs. If this is set to `off`, Duplicati will not attempt to create a disk snapshot. Setting this to `auto` makes Duplicati attempt to create a snapshot, and fail silently if that was not allowed or supported. A setting of `on` will also make Duplicati attempt to create a snapshot, but will produce a warning message in the log if it fails. Setting it to `required` will make Duplicati abort the backup if the snapshot creation fails. On Windows this uses the Volume Shadow Copy Services (VSS) and requires administrative privileges. On Linux this uses Logical Volume Management (LVM) and requires root privileges. LVM is sometimes a Linux install option. If you have it, you may still need to make space for snapshots.
 
 ### store-metadata
 `--store-metadata = true`  
